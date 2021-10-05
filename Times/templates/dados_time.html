@@ -1,0 +1,54 @@
+{% load bootstrap4 %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Informações de Equipe</title>
+    {% bootstrap_css %}
+</head>
+<body>
+<div class="container">
+    <h1>TABELA</h1>
+<table class="table table-bordered table-dark">
+    <thead>
+    <tr>
+        <th scope="col">#</th>
+        <th scope="col">Equipe</th>
+        <th scope="col">Pts</th>
+        <th scope="col">VIT</th>
+        <th scope="col">E</th>
+        <th scope="col">DER</th>
+        <th scope="col">SG</th>
+        <th scope="col">GF</th>
+        <th scope="col">GS</th>
+
+    </tr>
+    </thead>
+    <tbody>
+    {% for times in times %}
+    <tr>
+        <td scope="row"> {{times.id}}</td>
+        <td scope="row"> {{times.Time_Nome}}</td>
+        <td scope="row"> {{times.Time_Pontos}}</td>
+        <td scope="row"> {{times.Time_Vitorias}}</td>
+        <td scope="row"> {{times.Time_Empates}}</td>
+        <td scope="row"> {{times.Time_Derrotas}}</td>
+        <td scope="row"> {{times.Time_SaldoGols}}</td>
+        <td scope="row"> {{times.Time_GolsFeitos}}</td>
+        <td scope="row"> {{times.Time_GolsSofridos}}</td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+    <script type="text/javascript">
+function index()
+{
+location.href="{% url 'index' %}"
+}
+</script>
+
+<input type="button" class="btn btn-primary" value="Voltar" onClick="index()">
+
+{% bootstrap_javascript jquery='full' %}
+</body>
+</html>

@@ -1,0 +1,48 @@
+{% load bootstrap4 %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Membros da equipe</title>
+  {% bootstrap_css %}
+</head>
+<body>
+<div class="container">
+  <h1>LISTA DE JOGADORES</h1>
+  <table class="table table-bordered table-dark">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Nome</th>
+      <th scope="col">Gols</th>
+      <th scope="col">C.Amarelo</th>
+      <th scope="col">C.Vermelho</th>
+    </tr>
+  </thead>
+  <tbody>
+
+  {% for jogadores in jogadores %}
+    <tr>
+      <th scope="row">{{jogadores.id}}</th>
+      <th scope="row">{{jogadores.Jogador_Nome}}</th>
+      <th scope="row">{{jogadores.Jogador_Gols}}</th>
+      <th scope="row">{{jogadores.Jogador_CartaoAmarelo}}</th>
+      <th scope="row">{{jogadores.Jogador_CartaoVermelho}}</th>
+
+    </tr>
+
+  {% endfor %}
+  </tbody>
+</table>
+  <script type="text/javascript">
+function index()
+{
+location.href="{% url 'index' %}"
+}
+</script>
+
+<input type="button" class="btn btn-primary" value="Voltar" onClick="index()">
+
+  {% bootstrap_javascript jquery='full' %}
+</body>
+</html>

@@ -1,0 +1,29 @@
+{% load bootstrap4 %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Pagina dos arbitros dos Campeonatos</title>
+    {% bootstrap_css %}
+</head>
+<body>
+<div class="container">
+<h1>Lista de Juizes</h1>
+{% for juizes in juizes %}
+<ul class="list-group">
+  <li class="list-group-item">{{juizes.Juiz_Nome}}</li>
+</ul>
+{% endfor %}
+    <script type="text/javascript">
+function index()
+{
+location.href="{% url 'index' %}"
+}
+</script>
+
+<input type="button" class="btn btn-primary" value="Voltar" onClick="index()">
+
+
+{% bootstrap_javascript jquery='full' %}
+</body>
+</html>

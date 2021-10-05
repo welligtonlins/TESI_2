@@ -1,0 +1,31 @@
+asgiref==3.4.1
+backports.entry-points-selectable==1.1.0
+beautifulsoup4==4.10.0
+certifi==2021.5.30
+charset-normalizer==2.0.6
+conda==4.3.16
+Cython @ file:///buildstream/freedesktop-sdk/components/cython.bst
+distlib==0.3.3
+Django==3.2.7
+django-bootstrap4==3.0.1
+django-stdimage==5.3.0
+filelock==3.1.0
+idna==3.2
+Mako==1.1.5
+Markdown @ file:///buildstream/freedesktop-sdk/components/python3-markdown.bst
+meson @ file:///buildstream/freedesktop-sdk/components/meson.bst
+Pillow==8.3.2
+pipenv==2021.5.29
+platformdirs==2.4.0
+pycosat==0.6.3
+Pygments==2.10.0
+pytz==2021.1
+requests==2.26.0
+ruamel.yaml==0.17.16
+ruamel.yaml.clib==0.2.6
+six==1.16.0
+soupsieve==2.2.1
+sqlparse==0.4.2
+urllib3==1.26.7
+virtualenv==20.8.1
+virtualenv-clone==0.5.7

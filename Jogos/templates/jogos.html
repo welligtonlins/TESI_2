@@ -1,0 +1,52 @@
+{% load bootstrap4 %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Informações de Jogos</title>
+    {% bootstrap_css %}
+</head>
+<body>
+<div class="container">
+    <h1>TABELA DE JOGOS</h1>
+<table class="table table-bordered table-dark">
+    <thead>
+    <tr>
+        <th scope="col">#</th>
+        <th scope="col">Time I</th>
+        <th scope="col">X</th>
+        <th scope="col">Time II</th>
+        <th scope="col">Data</th>
+        <th scope="col">Campo</th>
+        <th scope="col">Juiz</th>
+
+
+    </tr>
+    </thead>
+    <tbody>
+    {% for jogos in jogos %}
+    <tr>
+        <td scope="row"> {{jogos.id}}</td>
+        <td scope="row"> {{jogos.Jogo_Time}}</td>
+        <td scope="row">VS </td>
+        <td scope="row"> {{jogos.Jogo_Time}}</td>
+        <td scope="row"> {{jogos.Jogo_Data}}</td>
+        <td scope="row"> {{jogos.Jogo_Campo}}</td>
+        <td scope="row"> {{jogos.Jogo_Juiz}}</td>
+
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+    <script type="text/javascript">
+function index()
+{
+location.href="{% url 'index' %}"
+}
+</script>
+
+<input type="button" class="btn btn-primary" value="Voltar" onClick="index()">
+
+{% bootstrap_javascript jquery='full' %}
+</body>
+</html>

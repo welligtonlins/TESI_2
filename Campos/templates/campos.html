@@ -1,0 +1,46 @@
+{% load bootstrap4 %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>CAMPOS DO CAMPEONATO</title>
+  {% bootstrap_css %}
+</head>
+<body>
+<div class="container">
+    <h1>CAMPOS DO CAMPEONATO</h1>
+ <table class="table table-striped">
+       <thead class="thead-dark">
+    <tr>
+        <th scope="col">#</th>
+        <th scope="col">Nome</th>
+        <th scope="col">Endereco</th>
+        <th scope="col">Link_Maps</th>
+
+    </tr>
+    </thead>
+    <tbody>
+    {% for campos in campos %}
+    <tr>
+        <td scope="row"> {{campos.id}}</td>
+        <td scope="row"> {{campos.Campo_Nome}}</td>
+        <td scope="row"> {{campos.Campo_End}}</td>
+        <td scope="row"><a href={{campos.Campo_Maps}} target="_blank"> Link para o Maps</a></td>
+    </tr>
+    {% endfor %}
+
+    </tbody>
+</table>
+    <script type="text/javascript">
+function index()
+{
+location.href="{% url 'index' %}"
+}
+</script>
+
+<input type="button" class="btn btn-primary" value="Voltar" onClick="index()">
+
+
+{% bootstrap_javascript jquery='full' %}
+</body>
+</html>

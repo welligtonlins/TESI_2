@@ -1,0 +1,30 @@
+{% load bootstrap4 %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Suporte</title>
+  {% bootstrap_css %}
+</head>
+<body>
+    <div class="container">
+    <h1>Suporte</h1>
+    <h2>Entre em contato!</h2>
+    <ul class="list-group">
+  <li class="list-group-item">Email: rbcampeonatos@rbcamp.com</li>
+  <li class="list-group-item">Email: suporte@rbcamp.com</li>
+  <li class="list-group-item">Contato: +55(68) 3225-2656</li>
+  <li class="list-group-item">Endereço: Av. Tim Maia, Nª432</li>
+    </ul>
+    <script type="text/javascript">
+function index()
+{
+location.href="{% url 'index' %}"
+}
+</script>
+
+<input type="button" class="btn btn-primary" value="Voltar" onClick="index()">
+
+    {% bootstrap_javascript jquery='full' %}
+</body>
+</html>

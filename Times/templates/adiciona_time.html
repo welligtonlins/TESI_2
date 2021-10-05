@@ -1,0 +1,35 @@
+{% load bootstrap4 %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Pagina de cadastro</title>
+    {% bootstrap_css %}
+</head>
+<body>
+<div class="container">
+    <h1>ADICIONANDO EQUIPES</h1>
+
+    {% bootstrap_messages %}
+    <form method="post" action="{% url 'adiciona_time' %}" class="form" autocomplete="off" enctype="multipart/form-data">
+        {% csrf_token %}
+        {% bootstrap_form form %}
+        {% buttons %}
+            <button type="submit" class="btn btn-success">
+                Adicionar
+            </button>
+        <script type="text/javascript">
+function index()
+{
+location.href="{% url 'index' %}"
+}
+</script>
+
+<input type="button" class="btn btn-primary" value="Voltar" onClick="index()">
+        {% endbuttons %}
+    </form>
+     </div>
+
+     {% bootstrap_javascript jquery='full' %}
+</body>
+</html>
